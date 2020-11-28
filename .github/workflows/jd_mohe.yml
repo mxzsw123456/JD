@@ -6,7 +6,7 @@ name: jd_mohe
 on:
   workflow_dispatch:
   schedule:
-    - cron: '1 16,17-24/3,0-15/3 * * *' 
+    - cron: '1 0-15/3,16,17-24/3 * * *' 
   watch:
     types: started
   repository_dispatch:
