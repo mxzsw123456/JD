@@ -157,7 +157,7 @@ async function doChannelsListTask(taskId, taskType) {
 }
 async function helpFriends() {
   await updateInviteCode();
-  if (!$.updatePkActivityIdRes) await updateInviteCodeCDN();
+  if (!$.inviteCodes) await updateInviteCodeCDN();
   for (let item of $.inviteCodes.inviteCode) {
     if (!item) continue
     await createAssistUser(item, $.createAssistUserID || "1318106976846299138");
@@ -693,7 +693,7 @@ function login(userName) {
     })
   })
 }
-function updateInviteCode(url = 'https://raw.githubusercontent.com/pukarziu/JinDon/master/jd_updateSmallHomeInviteCode.json') {
+function updateInviteCode(url = 'https://raw.githubusercontent.com/lxk0301/updateTeam/master/jd_updateSmallHomeInviteCode.json') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {
@@ -710,7 +710,7 @@ function updateInviteCode(url = 'https://raw.githubusercontent.com/pukarziu/JinD
     })
   })
 }
-function updateInviteCodeCDN(url = 'https://raw.githubusercontent.com/pukarziu/JinDon/master/jd_updateSmallHomeInviteCode.json') {
+function updateInviteCodeCDN(url = 'https://raw.fastgit.org/lxk0301/updateTeam/master/jd_updateSmallHomeInviteCode.json') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {
