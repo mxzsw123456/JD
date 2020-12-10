@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_moneyTree
+name: 🌲金融摇钱树
 
 on:
-
+  workflow_dispatch:
   schedule:
-    - cron: '40 */3 * * *'
+    - cron: '10 0-23 * * *' 
   watch:
     types: started
   repository_dispatch:
@@ -35,7 +35,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东摇钱树】'
+      - name: '运行 【金融摇钱树】'
         run: |
           node jd_moneyTree.js
         env:

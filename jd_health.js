@@ -36,7 +36,7 @@ if ($.isNode()) {
   cookiesArr.push(...[$.getdata('CookieJD'), $.getdata('CookieJD2')]);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-const inviteCodes = [`P04z54XCjVUnoaW5mNZVjexjCgTl0lbmg`, 'P04z54XCjVUnoaW5uOgp7ZqS3tKkw'];
+const inviteCodes = [`P04z54XCjVUnoaW5mNZVjexjCgTl0lbmg@P04z54XCjVUnoaW5uOgp7ZqS3tKkw@P04z54XCjVUnoaW5klR3sxgCNrP`, 'P04z54XCjVUnoaW5uOgp7ZqS3tKkw'];
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {
@@ -253,7 +253,7 @@ function jdhealth_getTaskDetail(get=1) {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `http://api.turinglabs.net/api/v1/jd/jdhealth/read/${randomCount}/`}, (err, resp, data) => {
+    $.get({url: `http://apii.turinglabs.net/api/v1/jd/jdhealth/read/${randomCount}/`}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
